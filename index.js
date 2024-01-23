@@ -59,7 +59,7 @@ img_active.forEach((curelem)=>curelem.classList.remove("p-images-not-active"));
 
 // swiper======================================
  new Swiper(".mySwiper", {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 30,
     autoplay:{
 delay:2500,
@@ -125,13 +125,13 @@ const speed=200;
 countNum.forEach((curelem)=>{
 const updateNumber=()=>{
     const targetNumber= parseInt(curelem.dataset.number)
-    // console.log(targetNumber)
+    console.log(targetNumber)
 
     const initilNum=parseInt(curelem.innerText);
-    // console.log(initilNum)
+    console.log(initilNum)
 
     const incrementNum=Math.trunc(targetNumber/speed)
-    // we can use tranc element desimal number
+    // we can use trunc element decimal number
     // console.log(incrementNum)
     if(initilNum< targetNumber){
         curelem.innerText=`${initilNum + incrementNum}+`;
@@ -140,3 +140,5 @@ const updateNumber=()=>{
 };
 updateNumber();
 })
+
+
